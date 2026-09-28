@@ -39,7 +39,7 @@ psql -U postgres -d auction_db -f sql/seed.sql
 ```properties
 db.url=jdbc:postgresql://localhost:5432/auction_db
 db.user=postgres
-db.password=ваш_пароль
+db.password=пароль_от_бд
 ```
 
 Не коммитьте реальные учетные данные PostgreSQL в публичный репозиторий.
