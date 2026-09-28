@@ -38,6 +38,7 @@ public class BidRepository {
         try (Connection conn = DatabaseManager.getConnection()) {
             conn.setAutoCommit(false);
             try {
+                // Балансовые изменения, ставка и новая цена лота фиксируются одной транзакцией.
                 Integer previousUserId = null;
                 BigDecimal previousAmount = null;
                 try (PreparedStatement highest = conn.prepareStatement(highestBidSql)) {
@@ -51,6 +52,7 @@ public class BidRepository {
                 }
 
                 BigDecimal deductAmount;
+                // Если лидер повышает собственную ставку, списывается только разница.
                 if (previousUserId != null && previousUserId == userId) {
                     deductAmount = amount.subtract(previousAmount);
                 } else {
