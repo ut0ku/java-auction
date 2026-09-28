@@ -55,4 +55,4 @@ java -jar target/auction-platform-1.0.0.jar
 - `src/main/resources/db.properties` — параметры подключения к БД.
 - `sql/schema.sql` — схема базы данных.
 - `sql/seed.sql` — демонстрационные данные.
-- `export/` — файлы экспорта.
+- `export/` — файлы экспорта. 
