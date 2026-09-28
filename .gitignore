@@ -1,0 +1,18 @@
+# Maven build output
+/target/
+/dependency-reduced-pom.xml
+
+# Runtime logs
+*.log
+
+# Generated exports
+/export/*.csv
+/export/*.xlsx
+
+# IDE files
+.idea/
+*.iml
+
+# Operating system files
+.DS_Store
+Thumbs.db
